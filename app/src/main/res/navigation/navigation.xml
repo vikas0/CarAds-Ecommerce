@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation"
+            app:startDestination="@id/adListScreen">
+
+    <fragment
+        android:id="@+id/adListScreen"
+        android:name="com.vikaspandey.carbazar.ui.adList.AdListFragment"
+        android:label="Car ads">
+
+        <action
+            android:id="@+id/showAdDetail"
+            app:destination="@id/AdDetail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AdDetail"
+        android:name="com.vikaspandey.carbazar.ui.adDetail.AdItemDetailFragment"
+        android:label="Delivery Detail">
+
+        <argument
+
+            android:name="ad_item_id"
+            app:argType="integer" />
+    </fragment>
+</navigation>
